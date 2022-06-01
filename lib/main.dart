@@ -26,7 +26,18 @@ class MyApp extends StatelessWidget {
                 "Welcome to MyApp",
                 style: TextStyle(color: Colors.white, fontSize: 30),
               ),
-            )
+            ),
+            ListTile( leading: Icon(Icons.developer_mode,),
+            title: Text("Developer_Mode"),),
+
+            ListTile( leading: Icon(Icons.message),
+            title: Text("Messages"),),
+
+            ListTile( leading: Icon(Icons.settings),
+            title: Text("Settings"),),
+
+            ListTile( leading: Icon(Icons.mail),
+            title: Text("Mail"),),
           ],
         ),
       ),
