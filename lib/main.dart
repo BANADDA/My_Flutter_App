@@ -10,46 +10,67 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(brightness: Brightness.dark,
-      primaryColor: Colors.blueAccent),
+        theme: ThemeData(
+            brightness: Brightness.dark, primaryColor: Colors.blueAccent),
         home: Scaffold(
-      appBar: AppBar(
-        title: const Text("MyApp"),
-        backgroundColor: Colors.amberAccent,
-      ),
-      drawer: Drawer(
-        child: ListView(
-          children: const <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(color: Colors.orangeAccent),
-              child: Text(
-                "Welcome to MyApp",
-                style: TextStyle(color: Colors.white, fontSize: 30),
-              ),
+          appBar: AppBar(
+            title: const Text("MyApp"),
+            backgroundColor: Colors.amberAccent,
+          ),
+          drawer: Drawer(
+            child: ListView(
+              children: const <Widget>[
+                DrawerHeader(
+                  decoration: BoxDecoration(color: Colors.orangeAccent),
+                  child: Text(
+                    "Welcome to MyApp",
+                    style: TextStyle(color: Colors.white, fontSize: 30),
+                  ),
+                ),
+                ListTile(
+                  leading: Icon(Icons.account_circle),
+                  title: Text("Profile"),
+                ),
+                ListTile(
+                  leading: Icon(
+                    Icons.developer_mode),
+                  title: Text("Developer_Mode"),
+                ),
+                ListTile(
+                  leading: Icon(Icons.message),
+                  title: Text("Messages"),
+                ),
+                ListTile(
+                  leading: Icon(Icons.settings),
+                  title: Text("Settings"),
+                ),
+                ListTile(
+                  leading: Icon(Icons.mail),
+                  title: Text("Mail"),
+                ),
+              ],
             ),
-            ListTile( leading: Icon(Icons.developer_mode,),
-            title: Text("Developer_Mode"),),
+          ),
+          body: const Center(
+            child: Text(
+              "Hello! this is this is flutter",
+              style: TextStyle(
+                  color: Colors.deepOrange,
+                  fontStyle: FontStyle.italic,
+                  fontSize: 25),
+            ),
+          ),
 
-            ListTile( leading: Icon(Icons.message),
-            title: Text("Messages"),),
+floatingActionButton: FloatingActionButton(elevation: 8,
+child: const Icon(Icons.favorite, size: 30, color: Colors.red,),
+// ignore: avoid_print
+onPressed: (){
+  // ignore: avoid_print
+  print("Hello! i'm Mubaraka");
+},
+backgroundColor: Colors.white,
+),
 
-            ListTile( leading: Icon(Icons.settings),
-            title: Text("Settings"),),
-
-            ListTile( leading: Icon(Icons.mail),
-            title: Text("Mail"),),
-          ],
-        ),
-      ),
-      body: const Center(
-        child: Text(
-          "Hello! this is this is flutter",
-          style: TextStyle(
-              color: Colors.deepOrange,
-              fontStyle: FontStyle.italic,
-              fontSize: 25),
-        ),
-      ),
-    ));
+        ));
   }
 }
